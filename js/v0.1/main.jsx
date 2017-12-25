@@ -11,9 +11,10 @@ class Achievements {
 
 class GameEngine {
 
-	var Achievements = new Achievements();
+	var Achievements;
 
 	Launch() {
+		this.Achievements = new Achievements();
 		ReactDOM.render(
 			<Cookie />,
 			document.getElementById('cookie')
