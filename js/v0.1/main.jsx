@@ -69,17 +69,20 @@ var Game = new GameEngine();
 /* ============================================ */
 
 class Cookie extends React.Component {
+	
+	handleClick() {
+		Game.Statistics.AddCookies(1);
+	}
+
 	render() {
 		return (
 			<div class="cookie">
-				<img src="img/mm-cookie.png" alt="I am the cookie!" />
+				<img src="img/mm-cookie.png" onClick={this.handleClick} alt="I am the cookie!" />
 			</div>
 		);
 	}
 
-	handleClick() {
-		Game.Statistics.AddCookies(1);
-	}
+	
 }
 /* */
 
