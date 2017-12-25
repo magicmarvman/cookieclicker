@@ -26,8 +26,6 @@ class GameEngine {
 }
 
 var Game = new GameEngine();
-Game.Launch();
-Game.RuinTheFun();
 
 /* ============================================ */
 /* | INTERFACE CONTROLLER 					  | */
@@ -42,3 +40,8 @@ class Cookie extends React.Component {
 		);
 	}
 }
+/* */
+
+
+Game.Launch();
+Game.RuinTheFun();
