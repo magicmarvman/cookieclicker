@@ -2,19 +2,18 @@
 /* | GAME ENGINE 							  | */
 /* ============================================ */
 
-class Achievements {
+class AchievementEngine {
 
 	Earn(achievement) {
 		alert("You earned the `"+achievement+"`-Achievement!");
 	}
 }
 
+var Achievements = new AchievementEngine();
+
 class GameEngine {
 
-	var Achievements;
-
 	Launch() {
-		this.Achievements = new Achievements();
 		ReactDOM.render(
 			<Cookie />,
 			document.getElementById('cookie')
@@ -22,7 +21,7 @@ class GameEngine {
 	}
 
 	RuinTheFun() {
-		this.Achievements.Earn("You ruined the fun!");
+		Achievements.Earn("You ruined the fun!");
 	}
 }
 
