@@ -77,7 +77,7 @@ class Cookie extends React.Component {
 	render() {
 		return (
 			<div class="cookie">
-				<img src="img/mm-cookie.png" style="cursor:pointer;" onClick={this.handleClick} alt="I am the cookie!" />
+				<img src="img/mm-cookie.png" onClick={this.handleClick} alt="I am the cookie!" />
 			</div>
 		);
 	}
