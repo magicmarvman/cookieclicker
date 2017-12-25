@@ -2,6 +2,43 @@
 /* | GAME ENGINE 							  | */
 /* ============================================ */
 
+class StatisticsEngine {
+
+	var cookies : int;
+	var achievements : int;
+
+	constructor() {
+		this.cookies = 0;
+		this.achievements = 0;
+	}
+
+	GetCookies() {
+		return this.cookies;
+	}
+
+	SetCookies(cooks : int) {
+		this.cookies = cooks;
+	}
+
+	AddCookies(cooks : int) {
+		this.SetCookies(this.GetCookies()+cooks);
+	}
+
+	GetAchievements() {
+		return this.achievements;
+	}
+
+	SetAchievements(cooks : int) {
+		this.achievements = cooks;
+	}
+
+	AddAchievement(cooks : int) {
+		this.SetAchievements(this.GetAchievements()+cooks);
+	}
+}
+
+var Statistics = new StatisticsEngine();
+
 class AchievementEngine {
 
 	Earn(achievement) {
@@ -38,6 +75,10 @@ class Cookie extends React.Component {
 				<img src="img/mm-cookie.png" alt="I am the cookie!" />
 			</div>
 		);
+	}
+
+	handleClick() {
+
 	}
 }
 /* */
