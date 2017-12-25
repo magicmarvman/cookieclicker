@@ -24,28 +24,18 @@ class StatisticsEngine {
 		this.SetCookies(this.GetCookies()+cooks);
 	}
 
-	GetAchievements() {
-		return this.achievements;
-	}
-
-	SetAchievements(cooks : int) {
-		this.achievements = cooks;
-	}
-
-	AddAchievement(cooks : int) {
-		this.SetAchievements(this.GetAchievements()+cooks);
-	}
-
 	RenderCookieCounter() {
 		$('#cooks').html('<b>'+this.GetCookies()+'</b>');
 	}
 }
 
+var StatisticData = {"ruin_the_fun":{"title":"Ruin the fun!","icon":"","description":"You ruined the fun by cheating ingame!"}};
+
 
 class AchievementEngine {
 
 	Earn(achievement) {
-		alert("You earned the `"+achievement+"`-Achievement!");
+		alert("You earned the `"+StatisticData[achievement]["title"]+"`-Achievement!");
 	}
 }
 
@@ -53,6 +43,12 @@ class GamePlayEngine {
 
 	Earn(cooks : int) {
 		Game.Statistics.AddCookies(cooks);
+	}
+
+
+
+	RuinTheFun() {
+		this.Achievements.Earn("ruin_the_fun");
 	} 
 }
 
@@ -67,10 +63,6 @@ class GameEngine {
 			<Cookie />,
 			document.getElementById('cookie')
 		);
-	}
-
-	RuinTheFun() {
-		this.Achievements.Earn("You ruined the fun!");
 	}
 }
 
