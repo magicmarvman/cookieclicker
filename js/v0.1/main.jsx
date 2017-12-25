@@ -11,7 +11,7 @@ class Achievements {
 
 class GameEngine {
 
-	this.Achievements = new Achievements();
+	var Achievements = new Achievements();
 
 	Launch() {
 		ReactDOM.render(
