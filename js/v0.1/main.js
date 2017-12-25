@@ -10,5 +10,5 @@ class Cookie extends React.Component {
 
 ReactDOM.render(
 	<Cookie />,
-	document.getElementById('root')
+	document.getElementById('main')
 );
