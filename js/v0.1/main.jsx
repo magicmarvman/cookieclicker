@@ -35,7 +35,7 @@ class Cookie extends React.Component {
 	render() {
 		return (
 			<div class="cookie">
-				<img src="img/cookie.png" alt="I am the cookie!" />
+				<img src="img/mm-cookie.png" alt="I am the cookie!" />
 			</div>
 		);
 	}
