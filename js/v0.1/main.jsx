@@ -35,6 +35,10 @@ class StatisticsEngine {
 	AddAchievement(cooks : int) {
 		this.SetAchievements(this.GetAchievements()+cooks);
 	}
+
+	RenderCookieCounter() {
+		$('#cooks').html('<b>'+this.GetCookies()+'</b>');
+	}
 }
 
 
@@ -45,10 +49,18 @@ class AchievementEngine {
 	}
 }
 
+class GamePlayEngine {
+
+	Earn(cooks : int) {
+		Game.Statistics.AddCookies(cooks);
+	} 
+}
+
 class GameEngine {
 
 	Achievements = new AchievementEngine();
 	Statistics = new StatisticsEngine();
+	Gameplay = new GamePlayEngine();
 
 	Launch() {
 		ReactDOM.render(
@@ -68,10 +80,36 @@ var Game = new GameEngine();
 /* | INTERFACE CONTROLLER 					  | */
 /* ============================================ */
 
+class CookieCounter extends React.Component {
+	render() {
+		return (
+			<div class="cookie-counter">
+				You clicked <span id="cooks"><b>0</b></span> cookies.
+			</div>
+		);
+	}
+
+	updateCounter() {
+		this.forceUpdate();
+	}
+}
+
+//
+
+ReactDOM.render(
+	<CookieCounter />,
+	document.getElementById('cookiecounter')
+);
+
+//
+
+
 class Cookie extends React.Component {
 
 	handleClick() {
 		Game.Statistics.AddCookies(1);
+		CookieCounter.updateCounter;
+		Game.Statistics.RenderCookieCounter();
 	}
 
 	render() {
@@ -84,7 +122,7 @@ class Cookie extends React.Component {
 
 	
 }
-/* */
+//
 
 
 Game.Launch();
