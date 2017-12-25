@@ -4,8 +4,8 @@
 
 class StatisticsEngine {
 
-	var cookies : int;
-	var achievements : int;
+	cookies : int;
+	achievements : int;
 
 	constructor() {
 		this.cookies = 0;
