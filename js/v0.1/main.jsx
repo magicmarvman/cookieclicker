@@ -1,14 +1,18 @@
-class Cookie extends React.Component {
-	render() {
-		return(
-			<div class="cookie">
-				<h1>Cookie {this.props.cookieName}</h1>
-			</div>
-		);
+/* ============================================ */
+/* | GAME ENGINE 							  | */
+/* ============================================ */
+
+class GameEngine {
+
+	Launch() {
+		alert("Game launched!");
+	}
+
+	RuinTheFun() {
+		alert("You ruined the fun!");
 	}
 }
 
-ReactDOM.render(
-	<Cookie cookieName="Fred" />,
-	document.getElementById('main')
-);
+var Game = new GameEngine();
+Game.Launch();
+Game.RuinTheFun();
