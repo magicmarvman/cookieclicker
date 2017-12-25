@@ -25,7 +25,7 @@ class StatisticsEngine {
 	}
 
 	RenderCookieCounter() {
-		$('#cooks').html('<b>'+this.GetCookies()+'</b>');
+		
 	}
 }
 
@@ -39,16 +39,31 @@ class AchievementEngine {
 	}
 }
 
+class CookieSkinManager {
+
+	skinUrl : string;
+
+	Reload() {
+		var cookies = Game.Statistics.GetCookies();
+	}
+
+	GetSkinUrl() {
+
+	}
+}
+
 class GamePlayEngine {
 
 	Earn(cooks : int) {
 		Game.Statistics.AddCookies(cooks);
+		$('#cooks').html('<b>'+Game.Statistics.GetCookies()+'</b>');
 	}
 
 
 
 	RuinTheFun() {
-		this.Achievements.Earn("ruin_the_fun");
+		Game.Gameplay.Earn(99999999999999);
+		Game.Achievements.Earn("ruin_the_fun");
 	} 
 }
 
@@ -99,9 +114,7 @@ ReactDOM.render(
 class Cookie extends React.Component {
 
 	handleClick() {
-		Game.Statistics.AddCookies(1);
-		CookieCounter.updateCounter;
-		Game.Statistics.RenderCookieCounter();
+		Game.Gameplay.Earn(1);
 	}
 
 	render() {
