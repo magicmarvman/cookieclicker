@@ -58,7 +58,7 @@ class GameEngine {
 	}
 
 	RuinTheFun() {
-		Achievements.Earn("You ruined the fun!");
+		this.Achievements.Earn("You ruined the fun!");
 	}
 }
 
