@@ -37,9 +37,6 @@ class StatisticsEngine {
 	}
 }
 
-var Statistics = new StatisticsEngine();
-
-var StatisticsData = {};
 
 class AchievementEngine {
 
@@ -48,9 +45,10 @@ class AchievementEngine {
 	}
 }
 
-var Achievements = new AchievementEngine();
-
 class GameEngine {
+
+	Achievements = new AchievementEngine();
+	Statistics = new StatisticsEngine();
 
 	Launch() {
 		ReactDOM.render(
@@ -80,7 +78,7 @@ class Cookie extends React.Component {
 	}
 
 	handleClick() {
-		Statistics.AddCookies(1);
+		Game.Statistics.AddCookies(1);
 	}
 }
 /* */
