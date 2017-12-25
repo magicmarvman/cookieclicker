@@ -39,6 +39,8 @@ class StatisticsEngine {
 
 var Statistics = new StatisticsEngine();
 
+var StatisticsData = {};
+
 class AchievementEngine {
 
 	Earn(achievement) {
@@ -78,7 +80,7 @@ class Cookie extends React.Component {
 	}
 
 	handleClick() {
-
+		Statistics.AddCookies(1);
 	}
 }
 /* */
