@@ -74,14 +74,14 @@ class GameEngine {
 	Gameplay = new GamePlayEngine();
 
 	Log(wtl : string) {
-		$('.console').append("\n"+wtl);
+		document.getElementById('console').html = document.getElementById('console').html+" -|- "+wtl;
 	}
 
 	Launch() {
-		
+
 		ReactDOM.render(
 			<Console />,
-			document.getElementById('console')
+			document.getElementById('consoleField')
 		);
 		this.Log("Game launched!");
 		this.Log("Test");
@@ -102,7 +102,7 @@ class Console extends React.Component {
 
 	render() {
 		return(
-			<textarea class="console" disabled="disabled"></textarea>
+			<textarea id="console" disabled="disabled"></textarea>
 		);
 	}
 }
