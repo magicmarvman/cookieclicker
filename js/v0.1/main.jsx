@@ -74,11 +74,11 @@ class GameEngine {
 	Gameplay = new GamePlayEngine();
 
 	Log(wtl : string) {
-		alert(wtl);
+		$('.console').append("\n"+wtl);
 	}
 
 	Launch() {
-
+		
 		ReactDOM.render(
 			<Console />,
 			document.getElementById('console')
