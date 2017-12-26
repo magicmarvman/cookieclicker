@@ -73,7 +73,18 @@ class GameEngine {
 	Statistics = new StatisticsEngine();
 	Gameplay = new GamePlayEngine();
 
+	Log(wtl : string) {
+		$('.console').append("\n"+wtl);
+	}
+
 	Launch() {
+		
+		ReactDOM.render(
+			<Console />,
+			document.getElementById('console')
+		);
+		this.Log("Game launched!");
+		this.Log("Test");
 		ReactDOM.render(
 			<Cookie />,
 			document.getElementById('cookie')
