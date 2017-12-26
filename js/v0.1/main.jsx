@@ -87,6 +87,18 @@ var Game = new GameEngine();
 /* | INTERFACE CONTROLLER 					  | */
 /* ============================================ */
 
+class Console extends React.Component {
+
+	render() {
+		return(
+			<textarea class="console" disabled="disabled"></textarea>
+		);
+	}
+}
+
+//
+//
+
 class CookieCounter extends React.Component {
 	render() {
 		return (
