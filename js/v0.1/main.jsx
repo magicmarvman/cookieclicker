@@ -74,7 +74,7 @@ class GameEngine {
 	Gameplay = new GamePlayEngine();
 
 	Log(wtl : string) {
-		document.getElementById('console').html = document.getElementById('console').html+" -|- "+wtl;
+		console.log(wtl);
 	}
 
 	Launch() {
