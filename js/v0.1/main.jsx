@@ -154,4 +154,3 @@ class Cookie extends React.Component {
 
 
 Game.Launch();
-Game.RuinTheFun();
