@@ -153,4 +153,17 @@ class Cookie extends React.Component {
 //
 
 
-Game.Launch();
+class Bootstrap {
+	constructor() {
+
+	}
+
+	LOAD() {
+		Game.Launch();
+	}
+
+
+}
+
+var Bootstrap = new Bootstrap();
+Bootstrap.LOAD();
