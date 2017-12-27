@@ -165,5 +165,5 @@ class GameBootstrap {
 
 }
 
-var GameBootstrap = new GameBootstrap();
-GameBootstrap.LOAD();
+var Bootstrap = new GameBootstrap();
+Bootstrap.LOAD();
