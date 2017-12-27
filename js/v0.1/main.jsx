@@ -67,20 +67,22 @@ class GamePlayEngine {
 	} 
 }
 
+
+AlertID = 0;
 class GameEngine {
 
 	Achievements = new AchievementEngine();
 	Statistics = new StatisticsEngine();
 	Gameplay = new GamePlayEngine();
-	NewestAlertId : int;
+	NewestAlertId : int = 1;
 
 	Log(wtl : string) {
 		console.log(wtl);
 	}
 
 	ShowAlert(al : string) {
-		this.NewestAlertId = this.NewestAlertId+1;
-		$('.alertFrame').append("<div id=\"alert"+this.NewestAlertId+"\" class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button><strong>Holy guacamole!</strong> "+al+"</div>");
+		AlertID = AlertID+1;
+		$('.alertFrame').append("<div id=\"alert"+AlertID+"\" class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button><strong>Holy guacamole!</strong> "+al+"</div>");
 	}
 
 	Launch() {
