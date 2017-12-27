@@ -68,7 +68,7 @@ class GamePlayEngine {
 }
 
 
-AlertID = 0;
+var AlertID = 0;
 class GameEngine {
 
 	Achievements = new AchievementEngine();
